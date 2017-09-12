@@ -1,6 +1,6 @@
 # Response Envelope Analysis (REA)
 
-This analytical tool enables the determination of drug combination effects (1) without knowing the inhibition mechanism of drugs and (2) in all scales, from local to global. 
+This analytical tool enables the determination of drug combination effects (i.e., synergy, additivity, or antagonism) at local, regional, and global levels without knowing the inhibition mechanism of drugs. 
 
 ## Tutorial
 
