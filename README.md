@@ -4,7 +4,7 @@ This analytical tool enables the determination of drug combination effects (i.e.
 
 ## Tutorial
 
-The main routine is "REA_example.m", which performs the analysis over representative examples from the oncology setting. The other ".m" files are subroutines that are called by the main routine to estimate the Hill parameters and plot response envelope and the experimental data. The ".csv" file is the example data set for the analysis. Please use the format for other data that need to analyzed using our tool. 
+The example file is "REA_example_run.m", which performs the analysis over representative examples from the oncology setting. It calls the main routine function "REA_package.p". The other ".m" and ".p" files are subroutines that are called by the main routine to estimate the Hill parameters and plot response envelope and the experimental data. The ".csv" file is the example data set for the analysis. Please use the format for other data that need to analyzed using REA. 
 
 ## References
 1. Du, D., et al, (2017), submitted to PNAS
