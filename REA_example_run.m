@@ -24,15 +24,15 @@ ft = 9; %font size
 lw = 3; %line width
 
 %% 2 read data file
-data = csvread('Griner_PNAS_2014_1.csv'); 
+data = csvread('borisy_PNAS_2003.csv'); 
 %the data are formatted as the following:
 %column 1, concentrations of drug 1, in uM
 %column 2, concentrations of drug 2, in uM
-%column 3, corresponding survival rates
+%column 3, corresponding survival rates in %
 %if the data show affected ratio or drug response instead, then the 
 %following step is needed
-%data(:,3) = 100-data(:,3); 
+data(:,3) = 100-data(:,3); 
 
 %% 3 perform the analysis
-f = REA_package(data,trim,ft,lw,'ibrutinib','MK-2206'); 
+f = REA_package(data,trim,ft,lw,'pentamidine','chlorpromazine',1); 
 %f is defined as a vector that contains SI and AI
