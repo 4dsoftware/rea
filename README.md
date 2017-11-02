@@ -8,7 +8,7 @@ The example file is "REA_example_run.m", which performs the analysis over repres
 
 ## Tutorial
 
-To use the REA package for other applications, one can simply call the function REA_package.m. The m-function requires four input variables, data, trim, ft, and lw. "data" is the data array obtained from experiments or simulations. The format is given in the example and should be used. "trim" is the margin of the plot beyond exisiting measurements. "ft" and "lw" are font size and line width, respectively. The last three are rather aesthetical. Other optional input variables include drug names and "custom_label" which specifies whether custom axis labels are used. If not customeds, logarithm of axis labels will be shown. 
+To use the REA package for other applications, one can simply call the function REA_package.m. The m-function requires four input variables, data, trim, ft, and lw. "data" is the data array obtained from experiments or simulations. The format is given in the example and should be used. "trim" is the margin of the plot beyond exisiting measurements. "ft" and "lw" are font size and line width, respectively. The last three are rather aesthetical. Other optional input variables include drug names and "custom_label" which specifies whether custom axis labels are used. If not customized, logarithm of axis labels will be shown. 
 
 ## References
 1. Du, D., et al, (2017), submitted
