@@ -12,6 +12,8 @@ To use the REA package for other applications, one can simply call the function 
 
 The output of the m-function "REA_package.m" includes the synergy index and antagonism index and the pipeline used to obtain these two indexes. The synergy index and antagonism index reflect regional combination effects, and the difference between these two suggests global effects.
 
+Please see "REA_Tutorial.pdf" for more details.
+
 ## References
 1. Du, D., et al, (2017), submitted
 2. Griner, L.A.M., et al, High-throughput combinatorial screening identifies drugs that cooperate with ibrutinib to kill activated B-cell–like diffuse large B-cell lymphoma cells. Proc. Nat. Acad. Sci. (2014)
