@@ -2,20 +2,45 @@ function f = REA_package(data,trim,ft,lw,drug1,drug2,custom_label)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Response Envelope Analysis (REA)
 %
-% Created by Daniel Du, Jan 2017
-% Proteomics and Metabolimics Core Facility
-% MD Anderson Cancer Center, Houston, TX
+% Di Du, Ph.D.
+% Department of Bioinfomatics and Computational Biology
+% University of Texas MD Anderson Cancer Center, Houston, TX
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Note
-
-% Response envelope analysis (REA) is a tool to quantitatively determine 
-% combination effects including synergy, additivity, and antagonism. 
-
-% Updates:
-% 09/20/2017 added nargin to include drug names
-% 09/20/2017 adjusted the size of aspr1 and aspr2 to make the spheres look
-% normal
-% 09/20/2017 automated the axis label generation
+%Notes
+%
+%Response envelope analysis (REA) is a tool to quantitatively determine 
+%combination effects including synergy, additivity, and antagonism. 
+%
+%Inputs: 
+%1. data, the data formatted as the following:
+%   column 1, concentrations of drug 1, in uM
+%   column 2, concentrations of drug 2, in uM
+%   column 3, corresponding survival rates in percentage
+%2. trim, the margin of the plot beyond exisiting measurements
+%3. ft, font size
+%4. lw, line width
+%5. drug1, the name of drug 1
+%6. drug2, the name of drug 2
+%7. custom_label, whether custom axis labels are used. If not customized, 
+%   logarithm of axis labels will be shown.
+%
+%Outputs:
+%1. graphical output: the pipeline to obtain the local combination effects
+%   and global combination effect reflected by the synergy index (SI) and
+%   antagonism index (AI).
+%2. f is a vector that contains SI and AI.
+%
+%References:
+%
+%1. Du, D. et al, submited, 2017
+%2. Griner, L.A.M. et al, PNAS 2014. doi: 10.1073/pnas.1311846111
+%3. Cokol, M. et al, Mol. Syst. Biol. 2011. doi: 10.1038/msb.2011.71
+%
+%Updates:
+%9/18/2017 added nargin to include drug names
+%9/20/2017 adjusted the size of aspr1 and aspr2 to make the spheres look
+%normal
+%9/20/2017 automated the axis label generation
 
 %--------------------------------------------------------------------------
 if nargin == 4
