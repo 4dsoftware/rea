@@ -1,4 +1,4 @@
-function f = REA_package(data,trim,ft,lw,drug1,drug2,custom_label)
+function siai = REA_package(data,trim,ft,lw,drug1,drug2,custom_label)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Response Envelope Analysis (REA)
 %
@@ -346,4 +346,4 @@ end
 set(gca,'fontsize',ft);
 view(150,20);
 
-f = [si ai]; %final output
+siai = [si ai]; %final output
