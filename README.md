@@ -2,7 +2,7 @@
 
 This analytical tool enables the determination of drug combination effects (i.e., synergy, additivity, or antagonism) at local, regional, and global levels without knowing the inhibition mechanism of drugs. 
 
-![cover](https://user-images.githubusercontent.com/15344717/32510067-efeaa3f2-c3b4-11e7-9e30-1a6bfd0a9acd.jpg)
+![cover](https://user-images.githubusercontent.com/15344717/32510711-182d3990-c3b7-11e7-9fbc-b1d796fc3706.jpg)
 
 ## Instruction
 
