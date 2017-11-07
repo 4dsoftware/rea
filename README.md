@@ -2,6 +2,8 @@
 
 This analytical tool enables the determination of drug combination effects (i.e., synergy, additivity, or antagonism) at local, regional, and global levels without knowing the inhibition mechanism of drugs. 
 
+![cover](https://user-images.githubusercontent.com/15344717/32509883-5400194a-c3b4-11e7-9833-a05b6e637360.jpg)
+
 ## Instruction
 
 The example file is "REA_example_all.m", which performs the analysis over representative examples from oncology and infectious disease settings. It calls the main routine function "REA_package.m". The other "package_*.m" files are subroutines that are called by the main routine to estimate the Hill parameters and plot response envelope. The ".csv" files are the example data sets for the analysis. Please use the format for other data that need to be analyzed using REA. 
