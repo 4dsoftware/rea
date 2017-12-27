@@ -1,6 +1,6 @@
 # Response Envelope Analysis (REA)
 
-This analytical tool enables the determination of drug combination effects (i.e., synergy, additivity, or antagonism) at local, regional, and global levels without knowing the inhibition mechanism of drugs. For REA with graphic interface, please visit https://github.com/soft4d/grea
+This analytical tool enables the determination of drug combination effects (i.e., synergy, additivity, or antagonism) at local, regional, and global levels without knowing the inhibition mechanism of drugs. For REA with graphic interface, please visit https://github.com/soft4d/grea.
 
 ![cover](https://user-images.githubusercontent.com/15344717/32510711-182d3990-c3b7-11e7-9fbc-b1d796fc3706.jpg)
 
