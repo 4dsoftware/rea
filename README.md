@@ -17,6 +17,6 @@ The output of the m-function "REA_package.m" includes the synergy index and anta
 Please see "REA_Tutorial.pdf" for more details.
 
 ## References
-1. Du, D., et al, (2019), submitted
+1. Du, D., et al, Response Envelope Analysis for Quantitative Evaluation of Drug Combinations, Bioinformatics, (2019)
 2. Griner, L.A.M., et al, High-throughput combinatorial screening identifies drugs that cooperate with ibrutinib to kill activated B-cell–like diffuse large B-cell lymphoma cells. Proc. Nat. Acad. Sci. (2014)
 3. Borisy, A.A., et al, Systematic discovery of multicomponent therapeutics. Proc. Nat. Acad. Sci. (2003)
