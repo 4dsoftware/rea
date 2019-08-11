@@ -29,6 +29,7 @@ function [alpha,beta,gamma] = RSRA_package(data,ca,cb)
 %10/6/2017 added beta and gamma
 
 %--------------------------------------------------------------------------
+data = sortrows(data,[-2 -1]); %sort rows based on column 2 and then column 1
 ndose1 = length(unique(data(:,1))); %number of doses for drug 1
 ndose2 = length(unique(data(:,2))); %number of doses for drug 2
 
@@ -43,7 +44,7 @@ surv1 = surv1(id1);  %sort surv1
 surv1 = surv1(2:end); %truncated unaffected fraction of drug 1 to exclude 0
 
 %single drug response curve for drug 2
-[dose2,id2] = sort(data(1:ndose2:end,2)); %concentrations of drug 2 
+[dose2,id2] = sort(data(1:(size(data,1)/ndose2):end,2)); %concentrations of drug 2 
 dose2 = dose2(2:end); %truncated concentrations of drug 2 to exclude 0
 base2 = dose2(1)^2/dose2(3);
 %on logarithmic scale, there can't be zeros. Here we set base1 to be zero,

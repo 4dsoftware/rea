@@ -1,4 +1,4 @@
-function siai = REA_package(data,trim,ft,lw,drug1,drug2,custom_label)
+function [siai,reg3,reg,reg2] = REA_package(data,trim,ft,lw,drug1,drug2,custom_label)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Response Envelope Analysis (REA)
 %
@@ -53,6 +53,7 @@ if nargin == 6
     custom_label = 0;
 end
 
+data = sortrows(data,[-2 -1]); %sort rows based on column 2 and then column 1
 ndose1 = length(unique(data(:,1))); %number of doses for drug 1
 ndose2 = length(unique(data(:,2))); %number of doses for drug 2
 
@@ -67,7 +68,7 @@ surv1 = surv1(id1);  %sort surv1
 surv1 = surv1(2:end); %truncated unaffected fraction of drug 1 to exclude 0
 
 %single drug response curve for drug 2
-[dose2,id2] = sort(data(1:ndose2:end,2)); %concentrations of drug 2 
+[dose2,id2] = sort(data(1:(size(data,1)/ndose2):end,2)); %concentrations of drug 2 
 dose2 = dose2(2:end); %truncated concentrations of drug 2 to exclude 0
 base2 = dose2(1)^2/dose2(3);
 %on logarithmic scale, there can't be zeros. Here we set base1 to be zero,
@@ -250,6 +251,18 @@ else
     reg2 = [];
 end
 
+%examine if additivity region is larger than the other two
+adv = 1 - gg - ff; %additivity region
+adv = reshape(adv,length(dose1),length(dose2)); %reshape antagonism label array to matrix
+CC = bwconncomp(adv,4); %connected-component labeling
+numPixels = cellfun(@numel,CC.PixelIdxList);
+[~,id] = max(numPixels);
+if isempty(id) == 0
+    reg3 = CC.PixelIdxList{id}'; %data list corresponding to the largest island of antagonism
+else
+    reg3 = [];
+end
+
 %visualize the island
 plot(log10(surv12_ar(reg,1)),log10(surv12_ar(reg,2)),'rs','markersize',mksz,'markerfacecolor','r');
 hold on
@@ -278,8 +291,10 @@ subplot(144);
 mksz = 0.015; %redefine marker size for this panel
 package_envelope_plotter(lam1,lam2,1,bot,h1,h2,log10(base1)-0.3,...
     log10(max(dose1))+0.3,log10(base2)-0.3,log10(max(dose2))+0.3,200,ft);
-hold on
 
+if length(reg3) < max(length(reg),length(reg2))
+    
+hold on
 %difference of the measured data from the envelope for synergy
 nn = 0;
 if isempty(reg) == 0
@@ -324,6 +339,11 @@ else
 dif2 = 0;  
 end
 hold off
+
+else
+    dif = 0;
+    dif2 = 0;
+end
 
 si = sum(dif)/size(data,1); %SI
 ai = sum(dif2)/size(data,1); %AI
