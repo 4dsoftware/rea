@@ -1,6 +1,6 @@
 # Response Envelope Analysis (REA)
 
-This analytical tool enables the determination of drug combination effects (i.e., synergy, additivity, or antagonism) at local, regional, and global levels without knowing the inhibition mechanism of drugs. It was developed under MATLAB computing environment, and all the scripts are ".m" files. Some useful variants for users from different background are below: 
+This analytical tool enables the determination of drug combination effects (i.e., synergy, additivity, or antagonism) at local, regional, and global levels without knowing the inhibition mechanism of drugs. It was developed under MATLAB computing environment, and all the scripts are ".m" files. Some useful variants for users with different background are down below: 
 
 1. REA with graphic interface (executable, no scripting is needed), https://github.com/4dsoftware/grea. 
 2. Three-drug combination, https://github.com/4dsoftware/rea43.
