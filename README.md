@@ -24,3 +24,6 @@ Please see "REA_Tutorial.pdf" for more details.
 1. Du, D., et al, Response Envelope Analysis for Quantitative Evaluation of Drug Combinations, Bioinformatics, (2019)
 2. Griner, L.A.M., et al, High-throughput combinatorial screening identifies drugs that cooperate with ibrutinib to kill activated B-cell–like diffuse large B-cell lymphoma cells. Proc. Nat. Acad. Sci. (2014)
 3. Borisy, A.A., et al, Systematic discovery of multicomponent therapeutics. Proc. Nat. Acad. Sci. (2003)
+
+## Contact
+Dr D. Du, dudthu06@gmail.com
